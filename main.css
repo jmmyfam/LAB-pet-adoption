@@ -1,12 +1,19 @@
-
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;;
+}
 #mypets {
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   border-color: aquamarine;
+  margin-top: 100px;
   
 }
+
+
 
 h1 {
   text-decoration: underline;
