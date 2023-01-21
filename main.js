@@ -311,7 +311,7 @@ const renderToDom = (divId, htmlToRender) => {
 const cardsOnDom = (array) => {
   let html = '';
   for (const pet of array) {
-    html += `<div class="card" style="width: 18rem;">
+    html += `<div class="card" style="width: 18rem; margin-top: 20px">
       <h1 class="card-text">${pet.name}</h1>
       <img src="${pet.imageUrl}" class="card-img-top" alt="">
       <div class="card-body">
