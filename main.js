@@ -333,16 +333,8 @@ const filter = (array, petType) => {
       petArray.push(pet);
     }
   }
-
-
   return petArray;
-
-
 };
-
-
-
-
 
 const showAll = document.querySelector('#viewAll');
 const showDino = document.querySelector('#viewDinos');
@@ -368,6 +360,12 @@ showDog.addEventListener('click', () => {
   const dogs = filter(pets, 'dog');
   cardsOnDom(dogs);
 });
+
+
+
+
+
+
 // }
 // }
 
