@@ -299,19 +299,76 @@ const pets = [
 
 // console.log(names);
 
-const app = document.querySelector('#mypets');
-let html = '';
+// const renderToDom = (divID, htmlToRender) => {}
+// const app = document.querySelector('#mypets');
+// let html = '';
 
+const renderToDom = (divId, htmlToRender) => {
+  const selectedDiv = document.querySelector(divId);
+  selectedDiv.innerHTML = htmlToRender
+};
 
-for (const pet of pets) {
-  html += `<div class="card" style="width: 18rem;">
-    <img src="${pet.imageUrl}" class="card-img-top" alt="">
-    <div class="card-body">
+const cardsOnDom = (array) => {
+  let html = '';
+  for (const pet of array) {
+    html += `<div class="card" style="width: 18rem;">
       <h1 class="card-text">${pet.name}</h1>
+      <img src="${pet.imageUrl}" class="card-img-top" alt="">
+      <div class="card-body">
       <p>${pet.specialSkill}</p>
-    </div>
-  </div>`;
+      </div>
+      
+    </div>`;
+  }
 
-}
+  renderToDom('#mypets', html);
+  
+};
 
-app.innerHTML = html;
+const filter = (array, petType) => {
+  const petArray = [];
+
+  for (const pet of array) {
+    if (pet.type === petType) {
+      petArray.push(pet);
+    }
+  }
+
+
+  return petArray;
+
+
+};
+
+
+
+
+
+const showAll = document.querySelector('#viewAll');
+const showDino = document.querySelector('#viewDinos');
+const showCat = document.querySelector('#viewCats');
+const showDog = document.querySelector('#viewDogs');
+
+showAll.addEventListener('click', () => {
+  cardsOnDom(pets);
+});
+
+
+showDino.addEventListener('click', () => {
+  const dinos = filter(pets, 'dino');
+  cardsOnDom(dinos);
+});
+
+showCat.addEventListener('click', () => {
+  const cats = filter(pets, 'cat');
+  cardsOnDom(cats);
+});
+
+showDog.addEventListener('click', () => {
+  const dogs = filter(pets, 'dog');
+  cardsOnDom(dogs);
+});
+// }
+// }
+
+// app.innerHTML = html;
