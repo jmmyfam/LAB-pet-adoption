@@ -1,3 +1,9 @@
+body {
+  background-image: url('https://media.istockphoto.com/id/1396228296/vector/seamless-pattern-dog-and-cat-inside-box-cartoon-character.jpg?s=612x612&w=0&k=20&c=ihpPxsHg_LmN160btmeQ_PUW5E-_jWw0g8PuaCmfDIA=');
+  
+}
+
+
 
 #mypets {
   display:flex;
@@ -6,11 +12,22 @@
   justify-content: space-around;
   border-color: aquamarine;
   margin-top: 40px;
+
+  
+}
+
+.intro {
+  margin-top: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, serif:
+  font-weight: 1000;
+  text-decoration: underline;
+  color: rgb(255, 255, 255);
   
 }
 
 .forms {
-  padding-top: 40px;
+  margin-top: 100px;
+
 }
 
 
@@ -28,8 +45,27 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.308);
   justify-content: flex-end;
+
 }
 
-#btn {
-  border-radius: 200px;
+.btns {
+  
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  background-color: rgba(245, 222, 179, 0.452)
+}
+
+
+#home {
+  border-radius: 60px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.404);
+  margin-left: 500px;
 }
