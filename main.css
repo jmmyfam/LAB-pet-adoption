@@ -1,18 +1,17 @@
-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;;
-}
+
 #mypets {
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   border-color: aquamarine;
-  margin-top: 100px;
+  margin-top: 40px;
   
 }
 
+.forms {
+  padding-top: 40px;
+}
 
 
 h1 {
@@ -29,4 +28,8 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.308);
   justify-content: flex-end;
+}
+
+#btn {
+  border-radius: 200px;
 }
